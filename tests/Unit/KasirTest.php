@@ -11,7 +11,7 @@ class KasirTest extends TestCase
 {
     use RefreshDatabase;
 
-  
+
     public function test_hitung_subtotal()
     {
         $kasir = new TransaksiController();
@@ -28,9 +28,9 @@ class KasirTest extends TestCase
     {
 
         $produk = Produk::create([
-            'nama_produk' => 'Buku',
+            'nama_produk' => 'Mochi',
             'harga' => 5000,
-            'stok' => 10
+            'stok' => 45
         ]);
 
 

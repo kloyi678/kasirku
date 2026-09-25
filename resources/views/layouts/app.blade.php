@@ -80,7 +80,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-kasir mb-4">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">&#128179; KasirKu</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" >
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
