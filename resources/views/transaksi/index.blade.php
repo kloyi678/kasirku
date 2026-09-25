@@ -1,4 +1,4 @@
-{{-- Fitur 3: Halaman/tabel riwayat transaksi + rangkuman total penjualan --}}
+
 @extends('layouts.app')
 
 @section('title', 'Riwayat Transaksi')
@@ -12,12 +12,12 @@
         <a href="{{ route('transaksi.create') }}" class="btn btn-primary">+ Transaksi Baru</a>
     </div>
 
-    {{-- Rangkuman total penjualan (angka agregat dari controller) --}}
+
     <div class="row g-3 mb-4">
         <div class="col-md-4">
             <div class="card p-3 text-center">
                 <small class="text-muted text-uppercase">Total Penjualan</small>
-                {{-- number_format: 1250000 -> 1.250.000 --}}
+
                 <strong class="fs-4 text-primary harga">Rp {{ number_format($totalPenjualan, 0, ',', '.') }}</strong>
             </div>
         </div>
@@ -51,9 +51,9 @@
                     @forelse ($transaksis as $transaksi)
                         <tr>
                             <td>#{{ $transaksi->id }}</td>
-                            {{-- model cast 'datetime' membuat ->format() langsung bisa dipakai --}}
+
                             <td>{{ $transaksi->tanggal->format('d/m/Y H:i') }}</td>
-                            {{-- relasi hasMany: hitung banyaknya baris detail tanpa query tambahan --}}
+
                             <td class="text-center">{{ $transaksi->detailTransaksis->count() }} item</td>
                             <td class="text-end harga"><strong>Rp {{ number_format($transaksi->total_bayar, 0, ',', '.') }}</strong></td>
                             <td class="text-center">

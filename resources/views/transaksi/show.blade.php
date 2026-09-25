@@ -1,4 +1,4 @@
-{{-- Detail satu transaksi (tampilan struk: daftar item + total bayar) --}}
+
 @extends('layouts.app')
 
 @section('title', 'Detail Transaksi #' . $transaksi->id)
@@ -28,7 +28,7 @@
 
                         @foreach ($transaksi->detailTransaksis as $detail)
                             <tr>
-                              
+
                                 <td>{{ $detail->produk->nama_produk ?? '(produk terhapus)' }}</td>
                                 <td class="text-center harga">Rp {{ number_format($detail->produk->harga ?? 0, 0, ',', '.') }}</td>
                                 <td class="text-center">{{ $detail->jumlah }}</td>
