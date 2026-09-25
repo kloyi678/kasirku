@@ -1,4 +1,4 @@
-{{-- Layout utama aplikasi KasirKu. Halaman lain memakai @extends('layouts.app') --}}
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -111,7 +111,7 @@
         </div>
     @endif
 
-  
+
     @if (session('error'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             {{ session('error') }}
