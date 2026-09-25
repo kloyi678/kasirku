@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Mengisi data awal produk supaya aplikasi langsung bisa dicoba
+       
         $this->call(ProdukSeeder::class);
     }
 }
