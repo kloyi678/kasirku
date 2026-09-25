@@ -1,4 +1,4 @@
-{{-- Form tambah produk baru --}}
+
 @extends('layouts.app')
 
 @section('title', 'Tambah Produk')
@@ -9,7 +9,7 @@
             <div class="card p-4">
                 <h4 class="mb-3">Tambah Produk</h4>
 
-                {{-- novalidate => mematikan balon pesan browser, memakai validasi Laravel --}}
+
                 <form action="{{ route('produk.store') }}" method="POST" novalidate>
                     @csrf
 
@@ -17,7 +17,7 @@
                         <label class="form-label">Nama Produk</label>
                         <input type="text" name="nama_produk" class="form-control @error('nama_produk') is-invalid @enderror"
                                value="{{ old('nama_produk') }}" placeholder="Contoh: Indomie Goreng" required>
-                        {{-- @error menampilkan pesan validasi spesifik per field --}}
+                       
                         @error('nama_produk')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

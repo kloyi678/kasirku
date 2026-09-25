@@ -32,10 +32,10 @@
                         <tr>
                             <td>{{ $produk->id }}</td>
                             <td>{{ $produk->nama_produk }}</td>
-                            {{-- number_format membulatkan & memberi pemisah ribuan gaya Indonesia --}}
+
                             <td class="text-end harga">Rp {{ number_format($produk->harga, 0, ',', '.') }}</td>
                             <td class="text-center">
-                                {{-- Badge stok: merah bila habis agar kasir cepat melihatnya --}}
+                               
                                 <span class="badge {{ $produk->stok > 0 ? 'bg-success' : 'bg-danger' }}">
                                     {{ $produk->stok }}
                                 </span>
@@ -43,7 +43,7 @@
                             <td class="text-center">
                                 <a href="{{ route('produk.edit', $produk) }}" class="btn btn-sm btn-warning">Edit</a>
 
-                                {{-- Form hapus memakai method spoofing DELETE (HTML hanya mengenal GET/POST) --}}
+
                                 <form action="{{ route('produk.destroy', $produk) }}" method="POST" class="d-inline"
                                       onsubmit="return confirm('Hapus produk {{ $produk->nama_produk }}?');">
                                     @csrf
@@ -61,7 +61,7 @@
             </table>
         </div>
 
-        {{-- Pagination hasil paginate(10) dari controller --}}
+
         <div class="mt-3">{{ $produks->links() }}</div>
     </div>
 @endsection
