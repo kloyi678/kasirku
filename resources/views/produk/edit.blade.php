@@ -9,7 +9,7 @@
             <div class="card p-4">
                 <h4 class="mb-3">Edit Produk: {{ $produk->nama_produk }}</h4>
 
-                {{-- PUT tidak didukung HTML, jadi dipalsukan dengan @method('PUT') --}}
+               
                 <form action="{{ route('produk.update', $produk) }}" method="POST" novalidate>
                     @csrf
                     @method('PUT')
