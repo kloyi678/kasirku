@@ -73,7 +73,7 @@ class TransaksiController extends Controller
         }
 
         $produk->stok = $sisaStok;
-        $produk->save(); // perintah UPDATE ke tabel produk
+        $produk->save(); 
     }
 
 
@@ -179,7 +179,7 @@ class TransaksiController extends Controller
 
     public function show(Transaksi $transaksi): View
     {
-       
+
         $transaksi->load('detailTransaksis.produk');
 
         return view('transaksi.show', compact('transaksi'));
